@@ -13,7 +13,7 @@ Func Testing examples included in this project are :
 How to run Fitnesse ?
 =====================
 Some batch files are provided to install everything very easily:
-1/ Launch "InstallFitnesse.bat" located on the root of the project
-2/ Open the solution, and rebuild it
-3/ Launch "LaunchFitnesse.bat"
-4/ Enjoy
+- Launch "InstallFitnesse.bat" located on the root of the project
+- Open the solution, and rebuild it
+- Launch "LaunchFitnesse.bat"
+- Enjoy
