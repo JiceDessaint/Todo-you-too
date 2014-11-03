@@ -1,0 +1,23 @@
+!1 Add a simple todo
+''We want to make sure that an item is created on the items list when we add a todo on the upper part of the page''
+
+!2 we clean the database to have no item at all
+!|script| DatabaseFixture |
+| Delete All |
+
+!2 We click on the "Add" button on the main screen
+!|script|MainFixture|
+| Click on Add Button|
+|check | Add Todo Popup Visibility| Visible |
+
+!2 We type the text of our todo and hit enter
+
+!|script| Add Todo Popup Fixture|
+| type text | test TODO | on the textbox and hit enter|
+
+!2 We check that the todo list contains our item only
+!| query: Get all todos |
+| Done | Text | Due Date |
+|  NO | test TODO | 02/01/2014 |
+
+

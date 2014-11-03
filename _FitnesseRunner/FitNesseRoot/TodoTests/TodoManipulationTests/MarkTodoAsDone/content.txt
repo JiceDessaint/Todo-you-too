@@ -1,0 +1,17 @@
+!1 Mark a Todo As Done
+''We want to make sure that an item is set to Done when checking the checkbox''
+
+!2 we reset the database to have sample data
+!|script| DatabaseFixture |
+| Populate with sample items |
+
+!2 We check a checkbox
+!|script|TodoListFixture|
+| check item with text | Sample Todo 1 |
+
+
+!2 We check that the todo is checked
+!| query:TodoListFixture |
+| done checked | text | date |
+|  true | Sample Todo 1 | none |
+

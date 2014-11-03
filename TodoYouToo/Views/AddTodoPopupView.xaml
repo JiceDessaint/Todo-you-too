@@ -1,0 +1,30 @@
+﻿<Border x:Class="TodoYouToo.AddTodoPopupView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" IsVisibleChanged="Border_IsVisibleChanged" >
+    <Border Background="White" Height="80" Width="300">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="130" />
+                </Grid.ColumnDefinitions>
+                <TextBox Name="todoText" Grid.Column="0" Text="{Binding Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="25" Margin="5,0" />
+                <DatePicker Grid.Column="1" SelectedDate="{Binding Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="25" Margin="5,0" />
+            </Grid>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="Cancel" Margin="5,10" Width="50" IsCancel="True">Cancel</Button>
+                <Button x:Name="Add" Margin="5,10" Width="50" IsDefault="True">Add</Button>
+
+            </StackPanel>
+        </Grid>
+    </Border>
+</Border>

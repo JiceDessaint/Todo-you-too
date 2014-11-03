@@ -1,0 +1,6 @@
+|import|
+|Fitnesse.Fixtures|
+
+!|script| InitializeFixture|
+|Initialize Application|
+|Initialize Date | 01/01/2014 |

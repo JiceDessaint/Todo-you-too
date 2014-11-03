@@ -1,0 +1,6 @@
+!define TEST_SYSTEM {slim} 
+
+!define COMMAND_PATTERN {%m -r fitSharp.Slim.Service.Runner -a ..\..\Fitnesse.Fixtures\bin\Debug\Fitnesse.Fixtures.dll.config %p}
+
+!define TEST_RUNNER {.\fitsharp\Runner.exe}
+!path ..\Fitnesse.Fixtures\bin\Debug\*.dll

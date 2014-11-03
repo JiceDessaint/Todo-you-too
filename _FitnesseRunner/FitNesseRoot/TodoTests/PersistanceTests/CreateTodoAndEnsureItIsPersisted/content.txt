@@ -1,0 +1,23 @@
+!1 Create A Todo And Ensure It Is Persisted
+''We want to make sure that an item created is persisted when restarting the application''
+
+!2 we clean the database to have no item at all
+!|script| Database Fixture |
+| Delete All |
+
+!2 We type the text of our todo and hit enter
+
+!|script| Add Todo Popup Fixture|
+| type text | test TODO | on the textbox and hit enter|
+
+!2 We close and start the application again
+!|script| Application Fixture |
+| Restart |
+
+!2 We check that the todo list contains our item
+!| query: Get all todos |
+| Done | Text | Due Date |
+|  NO | test TODO | 02/01/2014 |
+
+
+ 

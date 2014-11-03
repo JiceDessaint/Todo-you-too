@@ -1,0 +1,18 @@
+!1 Add a todo with date
+''We want to make sure that an item is created on the items list when we add a todo on the upper part of the page''
+
+!2 we clean the database to have no item at all
+!|script| DatabaseFixture |
+| Delete All |
+
+!2 We type the text of our todo and hit enter
+
+!|script| AddTodoFixture|
+| set date to | 2015-12-25 |
+| type text | Buy a present for Dad | on the textbox and hit enter|
+
+!2 We check that the todo list contains our item only
+!|script| query:TodoListFixture |
+| done checked | text | date |
+|  false | Buy a present for Dad | 2015-12-25 |
+
