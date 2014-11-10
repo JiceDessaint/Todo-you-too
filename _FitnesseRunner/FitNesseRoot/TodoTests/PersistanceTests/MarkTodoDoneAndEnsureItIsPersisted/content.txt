@@ -12,11 +12,12 @@
 
 !2 We close and start the application again
 !|script| ApplicationFixture |
-| Close |
-| Launch |
+| Restart |
 
 
 !2 We check that the todo is present and checked
-!| query:TodoListFixture |
-| done checked | text | date |
-|  true | Sample Todo 1 | none |
+!| query:Get all todos |
+| Done | Text | Due Date |
+|  YES | Sample Todo 1 | 01/01/2000 |
+|  NO | Sample Todo 2 | 01/01/2000 |
+|  NO | Sample Todo 3 | 01/01/2000 |

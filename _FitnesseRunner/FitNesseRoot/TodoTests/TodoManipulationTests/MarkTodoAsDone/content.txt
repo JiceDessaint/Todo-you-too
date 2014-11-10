@@ -7,11 +7,13 @@
 
 !2 We check a checkbox
 !|script|TodoListFixture|
-| check item with text | Sample Todo 1 |
+| check item with text | Sample Todo 2 |
 
 
 !2 We check that the todo is checked
-!| query:TodoListFixture |
-| done checked | text | date |
-|  true | Sample Todo 1 | none |
+!| query: get all todos |
+| Done | Text | Due Date |
+|  NO | Sample Todo 1 | 01/01/2000 |
+|  YES | Sample Todo 2 | 01/01/2000 |
+|  NO | Sample Todo 3 | 01/01/2000 |
 

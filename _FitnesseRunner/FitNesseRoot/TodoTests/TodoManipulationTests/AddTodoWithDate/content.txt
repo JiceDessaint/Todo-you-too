@@ -7,12 +7,12 @@
 
 !2 We type the text of our todo and hit enter
 
-!|script| AddTodoFixture|
+!|script| Add todo Popup fixture|
 | set date to | 2015-12-25 |
 | type text | Buy a present for Dad | on the textbox and hit enter|
 
 !2 We check that the todo list contains our item only
-!|script| query:TodoListFixture |
-| done checked | text | date |
-|  false | Buy a present for Dad | 2015-12-25 |
+!|query: get all todos |
+| Done | Text | Due Date |
+|  NO | Buy a present for Dad | 25/12/2015 |
 

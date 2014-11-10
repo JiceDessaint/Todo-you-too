@@ -11,11 +11,21 @@ namespace Fitnesse.Fixtures
 {
     public class AddTodoPopupFixture
     {
+        private IAddTodoPopup popup;
+        public AddTodoPopupFixture()
+        {
+            popup = IoC.Get<IMain>().AddTodoPopup;
+        
+        }
+
+        public void SetDateTo(DateTime date)
+        {
+            popup.Date = date;
+        }
         public void TypeTextOnTheTextboxAndHitEnter(string text)
         {
-            var main = IoC.Get<IMain>();
-            main.AddTodoPopup.Text = text;
-            main.AddTodoPopup.Add();
+            popup.Text = text;
+            popup.Add();
         }
     }
 }

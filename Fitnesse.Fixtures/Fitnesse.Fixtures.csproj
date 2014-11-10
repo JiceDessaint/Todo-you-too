@@ -67,6 +67,7 @@
     <Compile Include="Fixtures and Queries\GetAllTodos.cs" />
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="Fixtures and Queries\DatabaseFixture.cs" />
+    <Compile Include="Fixtures and Queries\TodoListFixture.cs" />
     <Compile Include="Utilities\DateTimeProvider.cs" />
     <Compile Include="Fixtures and Queries\InitializeFixture.cs" />
     <Compile Include="Fixtures and Queries\MainFixture.cs" />
