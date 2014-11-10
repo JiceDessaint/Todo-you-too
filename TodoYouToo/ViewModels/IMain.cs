@@ -8,5 +8,6 @@ namespace TodoYouToo {
         void ShowPopup();
         void HidePopup();
         void AddTodo(TodoItem item);
+        void SaveTodo(TodoItem item);
     }
 }

@@ -16,5 +16,7 @@ namespace TodoYouToo.Data
         void RemoveAll();
 
         void Remove(TodoItem item);
+
+        void SaveChanges();
     }
 }

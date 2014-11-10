@@ -33,6 +33,11 @@ namespace TodoYouToo.Data
             context.SaveChanges();
         }
 
+        public void SaveChanges()
+        {
+            context.SaveChanges();
+        }
+
         public void RemoveAll()
         {
             foreach (var id in context.TodoItems.Select(e => e.TodoItemID))

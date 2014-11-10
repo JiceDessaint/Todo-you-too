@@ -50,7 +50,8 @@
                                     <ColumnDefinition Width="60" />
                                 </Grid.ColumnDefinitions>
                                 <CheckBox Grid.Column="0" 
-                                          IsChecked="{Binding IsDone, Mode=TwoWay}" HorizontalAlignment="Center" />
+                                          IsChecked="{Binding IsDone, Mode=TwoWay}" HorizontalAlignment="Center"
+                                          cal:Message.Attach="SaveTodo($dataContext)" />
                                 <StackPanel Grid.Column="1">
                                     <TextBlock Padding="0,5,0,2" FontSize="15" FontWeight="Bold"
                                         Foreground="{Binding DueDate, Converter={StaticResource OverdueColorConverter}}">

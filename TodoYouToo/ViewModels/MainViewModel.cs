@@ -52,5 +52,11 @@ namespace TodoYouToo {
             this.TodoItems.Remove(item);
             this.todoRepository.Remove(item);
         }
+
+        public void SaveTodo(TodoItem item)
+        {
+            this.todoRepository.SaveChanges();
+        }
+
     }
 }
