@@ -3,7 +3,7 @@
 
 $fitnessePath = "."
 $fitsharpPath = ".\fitsharp"
-$urlDownloadFitnesse = "http://www.fitnesse.org/fitnesse-standalone.jar?responder=releaseDownload&release=20140901"
+$urlDownloadFitnesse = "http://www.fitnesse.org/fitnesse-standalone.jar?responder=releaseDownload&release=20121220"
 $urlDownloadFitsharp = "https://github.com/downloads/jediwhale/fitsharp/release.2.2.net.40.zip"
 
 $rootpath = "T:\Path1\Path2\*"
