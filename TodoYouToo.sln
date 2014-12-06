@@ -13,11 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoYouToo.Tests", "TodoYou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specflow.specs", "Specflow.specs\Specflow.specs.csproj", "{A6EB1889-9B08-47A9-83FB-74AD43801F8E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3DB8CDF4-3AD4-4F83-AA76-DCA2F643AD61}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\packages.config = .nuget\packages.config
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concordion.Specs", "Concordion.Specs\Concordion.Specs.csproj", "{A9A082D4-FB6B-4788-A65A-CD446B25F370}"
 EndProject
 Global
