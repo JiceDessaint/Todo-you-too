@@ -84,6 +84,20 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TodoYouToo\TodoYouToo.csproj">
+      <Project>{2b90f5a2-32bd-4f8a-9616-7e4a7e5ff3d3}</Project>
+      <Name>TodoYouToo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="concordion.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="DeleteTodo.html" />
+    <Content Include="ModifyTodo.html" />
+    <Content Include="AddTodo.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
