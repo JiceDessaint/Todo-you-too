@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoYouToo", "TodoYouToo\TodoYouToo.csproj", "{2B90F5A2-32BD-4F8A-9616-7E4A7E5FF3D3}"
 EndProject
@@ -12,6 +12,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoYouToo.Tests", "TodoYouToo.Tests\TodoYouToo.Tests.csproj", "{603823C5-B3DA-41C7-86DA-7B2CFD3E4CFB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specflow.specs", "Specflow.specs\Specflow.specs.csproj", "{A6EB1889-9B08-47A9-83FB-74AD43801F8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3DB8CDF4-3AD4-4F83-AA76-DCA2F643AD61}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concordion.Specs", "Concordion.Specs\Concordion.Specs.csproj", "{A9A082D4-FB6B-4788-A65A-CD446B25F370}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +46,10 @@ Global
 		{A6EB1889-9B08-47A9-83FB-74AD43801F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6EB1889-9B08-47A9-83FB-74AD43801F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6EB1889-9B08-47A9-83FB-74AD43801F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9A082D4-FB6B-4788-A65A-CD446B25F370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9A082D4-FB6B-4788-A65A-CD446B25F370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9A082D4-FB6B-4788-A65A-CD446B25F370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9A082D4-FB6B-4788-A65A-CD446B25F370}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
