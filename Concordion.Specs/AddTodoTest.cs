@@ -42,7 +42,12 @@ namespace Concordion.Specs
             try
             {
                 repo.RemoveAll();
-                return "empty";
+                if (repo.GetAll().Count() == 0) {
+                    return "empty";
+                }
+                else {
+                    return "still " + repo.GetAll().Count() + " elems in the database";
+                }
             }
             catch (Exception ex)
             {
@@ -54,7 +59,6 @@ namespace Concordion.Specs
         {
             IFormatProvider culture = new System.Globalization.CultureInfo("fr-FR", true);
             DateTimeProvider.MockedDate = DateTime.Parse(today, culture, System.Globalization.DateTimeStyles.AssumeLocal);
-            Console.Write(DateTimeProvider.MockedDate);
         }
 
         public String clickAddPopup()
@@ -62,7 +66,7 @@ namespace Concordion.Specs
             try
             {
                 mainVM.ShowPopup();
-                return "clicked on the add popup";
+                return "clicked on the plus button";
             }
             catch (Exception ex)
             {
@@ -79,6 +83,11 @@ namespace Concordion.Specs
         public IEnumerable<TodoItem> getAllTasks()
         {
             return mainVM.TodoItems.ToArray();
+        }
+
+        public String getPopupStatus()
+        {
+            return mainVM.IsAddPopupVisible ? "open" : "closed";
         }
 
     }

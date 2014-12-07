@@ -26,7 +26,7 @@
         <b>Given</b>, we are the <span concordion:execute="setTodayDate(#TEXT)">11/11/2011</span><br />
         <b>and </b>the app is <span concordion:assertequals="isAppRunning()">running</span><br />
         <b>and </b>the database is <span concordion:assertequals="clearDb()">empty</span><br />
-        <b>and </b>we <span concordion:assertEquals="clickAddPopup()">clicked on the add popup</span> <br />
+        <b>and </b>we <span concordion:assertEquals="clickAddPopup()">clicked on the plus button</span> <br />
         <b>When</b> we add a task named : <span concordion:execute="addTaskNamed(#TEXT)">This is my task tomorrow</span> <br />
         <b>Then</b> the tasks should be
         <table concordion:verifyrows="#result : getAllTasks()">
@@ -41,6 +41,12 @@
                 <td>12/11/2011 00:00:00</td>
             </tr>
         </table>
+    </div>
+
+    <div class="example">
+        <b>Given</b> the app is <span concordion:assertequals="isAppRunning()">running</span> <br />
+        <b>When</b> we <span concordion:assertequals="clickAddPopup()">clicked on the plus button</span> <br />
+        <b>Then</b> the popup should be <span concordion:assertequals="getPopupStatus()">open</span>
     </div>
 
 </body>
