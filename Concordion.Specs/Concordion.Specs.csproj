@@ -91,7 +91,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddTodoTest.cs" />
+    <Compile Include="Tests\AddTodoTest.cs" />
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="Data\ConcordionContext.cs" />
     <Compile Include="Data\ConcordionTodoRepository.cs" />
@@ -130,7 +130,7 @@
     <EmbeddedResource Include="concordion.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddTodo.html">
+    <EmbeddedResource Include="Tests\AddTodo.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

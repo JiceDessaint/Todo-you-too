@@ -44,6 +44,29 @@
     </div>
 
     <div class="example">
+        <b>Given</b>, we are the <span concordion:execute="setTodayDate(#TEXT)">11/11/2011</span><br />
+        <b>and </b>the app is <span concordion:assertequals="isAppRunning()">running</span><br />
+        <b>and </b>the database is <span concordion:assertequals="clearDb()">empty</span><br />
+        <b>and </b>we <span concordion:assertequals="clickAddPopup()">clicked on the plus button</span> <br />
+        <b>When</b> we add a task named : <span concordion:set="#name">This is my task tomorrow</span> and 
+        this due date : <span concordion:execute="addTask(#name, #TEXT)">15/11/2078</span>
+         <br />
+        <b>Then</b> the tasks should be
+        <table concordion:verifyrows="#result : getAllTasks()">
+            <tr>
+                <th concordion:assertequals="#result.IsDone">Is Done ?</th>
+                <th concordion:assertequals="#result.Text">Name</th>
+                <th concordion:assertequals="#result.DueDate">Due date</th>
+            </tr>
+            <tr>
+                <td>False</td>
+                <td>This is my task tomorrow</td>
+                <td>15/11/2078 00:00:00</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="example">
         <b>Given</b> the app is <span concordion:assertequals="isAppRunning()">running</span> <br />
         <b>When</b> we <span concordion:assertequals="clickAddPopup()">clicked on the plus button</span> <br />
         <b>Then</b> the popup should be <span concordion:assertequals="getPopupStatus()">open</span>

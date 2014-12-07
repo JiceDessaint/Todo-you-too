@@ -10,7 +10,7 @@ using Caliburn.Micro;
 using TodoYouToo;
 using TodoYouToo.Data;
 
-namespace Concordion.Specs
+namespace Concordion.Specs.Tests
 {
     [ConcordionTest]
     class AddTodoTest
@@ -18,13 +18,17 @@ namespace Concordion.Specs
         private static AppBootstrapper bootstrapper;
         private IMain mainVM;
         private ITodoRepository repo;
+        private static IFormatProvider culture = new System.Globalization.CultureInfo("fr-FR", true);
+
+        private static DateTime ParseDate(String date){
+            return DateTime.Parse(date, culture, System.Globalization.DateTimeStyles.AssumeLocal);
+        }
 
         public AddTodoTest()
         {
             bootstrapper = new AppBootstrapper();
             repo = IoC.Get<ITodoRepository>();
-
-            //bootstrapper.Initialize();
+            repo.RemoveAll();
         }
 
         public String isAppRunning()
@@ -57,8 +61,8 @@ namespace Concordion.Specs
 
         public void setTodayDate(String today)
         {
-            IFormatProvider culture = new System.Globalization.CultureInfo("fr-FR", true);
-            DateTimeProvider.MockedDate = DateTime.Parse(today, culture, System.Globalization.DateTimeStyles.AssumeLocal);
+
+            DateTimeProvider.MockedDate = ParseDate(today);
         }
 
         public String clickAddPopup()
@@ -77,6 +81,13 @@ namespace Concordion.Specs
         public void addTaskNamed(String name) {
             var popup = mainVM.AddTodoPopup;
             popup.Text = name;
+            popup.Add();
+        }
+        public void addTask(String name, String dueDate)
+        {
+            var popup = mainVM.AddTodoPopup;
+            popup.Text = name;
+            popup.Date = ParseDate(dueDate);
             popup.Add();
         }
 
