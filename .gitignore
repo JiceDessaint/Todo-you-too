@@ -160,7 +160,12 @@ $RECYCLE.BIN/
 *.jar
 _FitnesseRunner
 
+#Concordion
+Concordion.Specs/Concordion
+Concordion.Specs/image
+
 #other
+.nuget
 packages/
 setup.exe
 Todo

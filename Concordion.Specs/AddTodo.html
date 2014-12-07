@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Add Todo</title>
-    <link href="concordion.css" rel="stylesheet" type="text/css">
+    <link href="concordion.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <h1>Add a Task</h1>
@@ -21,22 +21,24 @@
             </ul>
         </div>
     </div>
+
     <div class="example">
-        Given, the app is running<br/>
-        and we are the 11/11/2011<br/>
-        and we clicked on the add popup, <br/>
-        When we add a task named : This is my task tomorrow <br/>
-        Then the tasks should be
-        <table>
+        <b>Given</b>, we are the <span concordion:execute="setTodayDate(#TEXT)">11/11/2011</span><br />
+        <b>and </b>the app is <span concordion:assertequals="isAppRunning()">running</span><br />
+        <b>and </b>the database is <span concordion:assertequals="clearDb()">empty</span><br />
+        <b>and </b>we <span concordion:assertEquals="clickAddPopup()">clicked on the add popup</span> <br />
+        <b>When</b> we add a task named : <span concordion:execute="addTaskNamed(#TEXT)">This is my task tomorrow</span> <br />
+        <b>Then</b> the tasks should be
+        <table concordion:verifyrows="#result : getAllTasks()">
             <tr>
-                <th>Is Done ?</th>
-                <th>Name</th>
-                <th>Due date</th>
+                <th concordion:assertequals="#result.IsDone">Is Done ?</th>
+                <th concordion:assertequals="#result.Text">Name</th>
+                <th concordion:assertequals="#result.DueDate">Due date</th>
             </tr>
-<tr>
-                <td>Not done</td>
+            <tr>
+                <td>False</td>
                 <td>This is my task tomorrow</td>
-                <td>12/11/2011</td>
+                <td>12/11/2011 00:00:00</td>
             </tr>
         </table>
     </div>
