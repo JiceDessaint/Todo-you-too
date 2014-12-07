@@ -30,6 +30,7 @@ namespace Concordion.Specs.Data
 
         public void Remove(TodoItem item)
         {
+            context.TodoItems.Attach(item);
             context.TodoItems.Remove(item);
             context.SaveChanges();
         }

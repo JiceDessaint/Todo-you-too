@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head>
+    <meta charset="utf-8" />
+    <title>Delete Todo</title>
+    <link href="concordion.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Delete a Task</h1>
+    <div class="example">
+        <p>
+            As an user, I can delete a task in order clean my history
+        </p>
+
+    </div>
+
+    <div class="example">
+        <b>Given </b>the app is <span concordion:assertequals="isAppRunning()">running</span><br />
+        <b concordion:execute="clearDb()" >and, </b> the current tasks are : 
+        <table concordion:execute="addTask(#name, #date)">
+            <tr>
+                <th concordion:set="#name">Name</th>
+                <th concordion:set="#date">Due date</th>
+            </tr>
+            <tr>
+                <td>This is my task tomorrow</td>
+                <td>12/11/2011</td>
+            </tr>
+            <tr>
+                <td>This is my second task for tomorrow</td>
+                <td>12/11/2011</td>
+            </tr>
+        </table>
+
+        <b>When</b> we delete the task named : <span concordion:execute="deleteTaskNamed(#TEXT)">This is my task tomorrow</span> <br />
+        <b>Then</b> the tasks should be
+        <table concordion:verifyrows="#result : getAllTasks()">
+            <tr>
+                <th concordion:assertequals="#result.IsDone">Is Done ?</th>
+                <th concordion:assertequals="#result.Text">Name</th>
+                <th concordion:assertequals="#result.DueDate">Due date</th>
+            </tr>
+            <tr>
+                <td>False</td>
+                <td>This is my second task for tomorrow</td>
+                <td>12/11/2011 00:00:00</td>
+            </tr>
+        </table>
+    </div>
+
+   
+</body>
+</html>

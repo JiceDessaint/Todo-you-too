@@ -29,6 +29,7 @@ namespace TodoYouToo.Data
 
         public void Remove(Entities.TodoItem item)
         {
+            context.TodoItems.Attach(item);
             context.TodoItems.Remove(item);
             context.SaveChanges();
         }
