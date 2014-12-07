@@ -12,8 +12,9 @@ Func Testing examples included in this project are :
 
 Requirements
 ============
- -   [Visual Studio] (http://www.visualstudio.com/)
- -   [Java](https://www.java.com/fr/download)
+ - [Visual Studio] (http://www.visualstudio.com/)
+ - [Java](https://www.java.com/fr/download)
+ - [Testdriven](http://testdriven.net/)
  -   ...
  
 Installation
@@ -33,3 +34,13 @@ Some batch files are provided to install everything very easily:
  - Open the solution, and rebuild it
  - Launch "LaunchFitnesse.bat"
  - Enjoy
+ 
+ How to run Concordion ?
+ =======================
+ 
+ You will need to run Nunit test, unfortunately, it doesn't work properly with Nunit adapter. You have to use [TestDriven](http://testdriven.net/), you can also use Galio or nunit in command line
+ 
+  - install [TestDriven](http://testdriven.net/)
+  - copy the the lib from .\lib\Concordion.Nunit.dll to <Install path of testDriven>\NUnit\2.6\addins
+  - run the test with testDriven (right click on the project -> run test...)
+  - you will find the generated html file here .\Concordion.Specs\Concordion\Specs\Tests\
