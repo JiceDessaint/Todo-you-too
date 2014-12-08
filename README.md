@@ -14,7 +14,9 @@ Requirements
 ============
  - [Visual Studio] (http://www.visualstudio.com/)
  - [Java](https://www.java.com/fr/download)
- - [Testdriven](http://testdriven.net/)
+ - [Testdriven](http://testdriven.net/) (optionnal)
+ - [SpecFlow Extension](https://visualstudiogallery.msdn.microsoft.com/9915524d-7fb0-43c3-bb3c-a8a14fbd40ee) (optionnal)
+ - [Pickles](http://www.picklesdoc.com)
  -   ...
  
 Installation
@@ -44,3 +46,13 @@ Some batch files are provided to install everything very easily:
   - copy the the lib from .\lib\Concordion.Nunit.dll to <Install path of testDriven>\NUnit\2.6\addins
   - run the test with testDriven (right click on the project -> run test...)
   - you will find the generated html file here .\Concordion.Specs\Concordion\Specs\Tests\
+  
+How to run Specflow ?
+=====================
+You will need to run the [Nunit](http://nunit.org) tests of the Specflow.specs project : you can use the Nunit adapter, resharper or testDriven.
+
+You also can generate some pretty outputfile, whether it's HTML or Docx with Pickles  : if you installed it through nuget you can run :
+
+	Pickle-Features -FeatureDirectory .\Specflow.specs\Features -OutputDirectory .\Specflow.specs\Result
+
+You will be able to see the result file here : .\Specflow.specs\Result
