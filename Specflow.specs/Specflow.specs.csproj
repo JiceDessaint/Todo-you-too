@@ -64,10 +64,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="Features\AddTask.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddTask.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\DataShouldBePersisted.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataShouldBePersisted.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\DeleteTask.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeleteTask.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\MarkTask.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarkTask.feature</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ApplicationHelper.cs" />
     <Compile Include="Helpers\DateTimeProvider.cs" />
@@ -81,9 +96,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Features\AddTask.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddTask.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\DataShouldBePersisted.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DataShouldBePersisted.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\DeleteTask.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DeleteTask.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\MarkTask.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MarkTask.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
