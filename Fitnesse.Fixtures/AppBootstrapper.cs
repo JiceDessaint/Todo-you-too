@@ -7,6 +7,7 @@ namespace Fitnesse.Fixtures {
     using TodoYouToo.Interfaces;
     using Fitnesse.Fixtures.Utilities;
     using TodoYouToo.Data;
+    using Fitnesse.Fixtures.Data;
 
     public class AppBootstrapper : BootstrapperBase {
         SimpleContainer container;
@@ -24,7 +25,7 @@ namespace Fitnesse.Fixtures {
             container.Singleton<IDateTimeProvider, DateTimeProvider>();
 
             // Storage : We inject EntityFramework context and our repository
-            container.PerRequest<IContext, Context>();
+            container.PerRequest<IContext, FitnesseContext>();
             container.PerRequest<ITodoRepository, TodoRepository>();
         }
 

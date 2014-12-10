@@ -96,7 +96,6 @@
     <Compile Include="Tests\AddTodoTest.cs" />
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="Data\ConcordionContext.cs" />
-    <Compile Include="Data\ConcordionTodoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Fixture.cs" />
     <Compile Include="Utilities\DateTimeProvider.cs" />

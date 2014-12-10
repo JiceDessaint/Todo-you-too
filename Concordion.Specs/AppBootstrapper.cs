@@ -26,7 +26,7 @@ namespace Concordion.Specs {
 
             // Storage : We inject EntityFramework context and our repository
             container.PerRequest<IContext, ConcordionContext>();
-            container.PerRequest<ITodoRepository, ConcordionTodoRepository>();
+            container.PerRequest<ITodoRepository, TodoRepository>();
         }
 
         protected override object GetInstance(Type service, string key) {

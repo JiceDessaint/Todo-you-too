@@ -10,6 +10,8 @@ namespace TodoYouToo.Data
 {
     public class Context:DbContext, IContext
     {
+        public Context(string name):base(name) { }
+
         public DbSet<TodoItem> TodoItems { get; set; }
     }
 }

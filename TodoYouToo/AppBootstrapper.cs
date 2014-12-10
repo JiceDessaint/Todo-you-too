@@ -22,7 +22,7 @@ namespace TodoYouToo {
             container.Singleton<IDateTimeProvider, RealDateTimeProvider>();
 
             // Storage : We inject EntityFramework context and our repository
-            container.PerRequest<IContext, Context>();
+            container.PerRequest<IContext, TodoYouTooContext>();
             container.PerRequest<ITodoRepository, TodoRepository>();
         }
 

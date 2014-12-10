@@ -64,6 +64,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\FitnesseContext.cs" />
     <Compile Include="Fixtures and Queries\AddTodoPopupFixture.cs" />
     <Compile Include="Fixtures and Queries\ApplicationFixture.cs" />
     <Compile Include="Fixtures and Queries\GetAllTodos.cs" />

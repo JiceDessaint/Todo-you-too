@@ -91,6 +91,7 @@
     </ApplicationDefinition>
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="Converters\OverdueColorConverter.cs" />
+    <Compile Include="Data\TodoYouTooContext.cs" />
     <Compile Include="Data\Context.cs" />
     <Compile Include="Data\IContext.cs" />
     <Compile Include="Data\ITodoRepository.cs" />

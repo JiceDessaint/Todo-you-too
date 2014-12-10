@@ -18,7 +18,7 @@ namespace Concordion.Specs.Tests
         public void deleteTaskNamed(String name) {
             try
             {
-                var tasks = repo.GetAll().Where(i => i.Text == name);
+                var tasks = mainVM.TodoItems.Where(i => i.Text == name);
                 var taskLength = tasks.Count();
                 if (taskLength > 1)
                     throw new Exception(taskLength + " task have this name.");

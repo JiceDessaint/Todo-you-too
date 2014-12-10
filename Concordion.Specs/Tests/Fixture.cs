@@ -49,6 +49,7 @@ namespace Concordion.Specs.Tests
                 repo.RemoveAll();
                 if (repo.GetAll().Count() == 0)
                 {
+                    mainVM.TodoItems.Clear();
                     return "empty";
                 }
                 else

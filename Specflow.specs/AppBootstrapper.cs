@@ -8,6 +8,7 @@ namespace Specflow.specs
     using TodoYouToo.Interfaces;
     using TodoYouToo.Data;
     using Specflow.specs.Helpers;
+    using Specflow.Specs.Data;
 
     public class AppBootstrapper : BootstrapperBase
     {
@@ -29,7 +30,7 @@ namespace Specflow.specs
             container.Singleton<IDateTimeProvider, DateTimeProvider>();
 
             // Storage : We inject EntityFramework context and our repository
-            container.PerRequest<IContext, Context>();
+            container.PerRequest<IContext, SpecflowContext>();
             container.PerRequest<ITodoRepository, TodoRepository>();
         }
 

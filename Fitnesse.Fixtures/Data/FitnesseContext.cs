@@ -7,11 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 using TodoYouToo.Data;
 
-namespace Concordion.Specs.Data
+namespace Fitnesse.Fixtures.Data
 {
-    public class ConcordionContext:Context, IContext
+    public class FitnesseContext:Context, IContext
     {
-        public ConcordionContext():base("Concordion")
+        public FitnesseContext()
+            : base("Fitnesse")
         {
 
         }

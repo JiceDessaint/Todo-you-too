@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="Data\SpecflowContext.cs" />
     <Compile Include="Features\AddTask.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
